@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 const Shop = () => {
     return (
-        <div id ="profile">
+        <div id ="shop">
             <h1>SHOP</h1>
         </div>
     )
