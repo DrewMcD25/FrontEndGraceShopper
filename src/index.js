@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom';
 import React, { useState } from 'react';
 import Login from './components/lilo';
 import Home from './components/home'
-import Shop from './components/Shop'
+import Shop from './components/shop'
 import Cart from './components/cart'
 import Navbar from './components/navbar';
 import Register from './components/register'
