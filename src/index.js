@@ -12,7 +12,6 @@ import './components/style/home.css'
 
 const App = () => {
     const [isNewUser, setIsNewUser] = useState(true)
-    const [postList, setPostList] = useState([])
     const renderAuthForm = (e) => {
         if (isNewUser) {
             return <Login toggleNewUser={setIsNewUser} />
