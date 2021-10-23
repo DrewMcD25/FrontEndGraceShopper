@@ -1,0 +1,62 @@
+
+#navbar{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    flex: auto;
+    width: 100%;
+    height: 50px;
+    font-size: 30px;
+}
+
+#navbar a:hover{
+    background-color:white ;
+    color: black;
+}
+
+#navbar a{
+    background-color:black;
+    color: white;
+    padding: 5px 10px;
+    word-wrap: normal;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#welcome {
+display: flex;
+justify-content: center;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+color: white;
+-webkit-text-stroke: .7px black;
+}
+
+#body {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    overflow-y: auto;
+    color: white;
+    -webkit-text-stroke: .7px black;  
+}
+#shop {
+    text-align: center;
+    padding: 50px;
+    color: white;
+    -webkit-text-stroke: .7px black;
+}
+
+#register {
+    text-align: center;
+    padding: 50px;
+    color: white;
+    -webkit-text-stroke: .7px black;
+}
+
+#lilo {
+    padding: 50px;
+    color: white;
+    text-align: center;
+    -webkit-text-stroke: .7px black;
+}
+
