@@ -14,7 +14,7 @@ const Login = ({ userToken }) => {
     const [password, setPassword] = useState('')
     async function saveToken(event) {
         event.preventDefault()
-        fetch('https://strangers-things.herokuapp.com/api/2105-OKU-RM-WEB-PT/users/login', {
+        fetch('https://serene-stream-31668.herokuapp.com//users/login', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
