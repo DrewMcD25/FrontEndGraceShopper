@@ -3,7 +3,7 @@
 const Register = () => {
     async function handleSubmit(event) {
         event.preventDefault()
-        const response = await fetch('https://strangers-things.herokuapp.com/api/2105-OKU-RM-WEB-PT/users/register', {
+        const response = await fetch('https://serene-stream-31668.herokuapp.com/api/users/register', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
