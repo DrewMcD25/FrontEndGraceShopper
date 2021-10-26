@@ -1,4 +1,6 @@
-
+*{
+    background-color: aqua;
+}
 #navbar{
     background-color: black;
     display: flex;
@@ -29,6 +31,7 @@ justify-content: center;
 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 color: white;
 -webkit-text-stroke: .7px black;
+
 }
 
 #body {
@@ -38,6 +41,7 @@ color: white;
     overflow-y: auto;
     color: white;
     -webkit-text-stroke: .7px black;  
+    
 }
 #shop {
     text-align: center;
