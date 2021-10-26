@@ -1,5 +1,7 @@
 *{
-    background-color: aqua;
+    background-image: url("sunset logo.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 #navbar{
     background-color: black;
