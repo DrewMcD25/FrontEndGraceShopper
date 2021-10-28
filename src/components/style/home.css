@@ -1,5 +1,9 @@
 *{
-    background-image: url("sunset logo.png");
+    
+}
+
+#background {
+    background-image: url("sunsetlogo.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
