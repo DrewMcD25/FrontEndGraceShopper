@@ -1,29 +1,38 @@
+<<<<<<< HEAD
 *{
     
 }
 
 #background {
     background-image: url("sunsetlogo.png");
+=======
+* {
+    background-color: rgb(221, 115, 33);
+    background-image: url("sunset logo.png");
+>>>>>>> ee56bee55e6df532034ff5c39e8098842858bb55
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: center;
+    background-size: 950px;
 }
+
 #navbar{
-    background-color: black;
+    background-color: #b4242d;
     display: flex;
     justify-content: space-around;
     flex: auto;
     width: 100%;
-    height: 50px;
+    height: 45px;
     font-size: 30px;
 }
 
 #navbar a:hover{
-    background-color:white ;
-    color: black;
+    background-color: transparent ;
+    color: #b4242d;
 }
 
 #navbar a{
-    background-color:black;
+    background-color:#b4242d;
     color: white;
     padding: 5px 10px;
     word-wrap: normal;
@@ -37,7 +46,6 @@ justify-content: center;
 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 color: white;
 -webkit-text-stroke: .7px black;
-
 }
 
 #body {
