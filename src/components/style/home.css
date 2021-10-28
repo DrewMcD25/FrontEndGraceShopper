@@ -1,21 +1,11 @@
-<<<<<<< HEAD
-*{
-    
-}
-
-#background {
-    background-image: url("sunsetlogo.png");
-=======
 * {
     background-color: rgb(221, 115, 33);
     background-image: url("sunset logo.png");
->>>>>>> ee56bee55e6df532034ff5c39e8098842858bb55
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: 950px;
 }
-
 #navbar{
     background-color: #b4242d;
     display: flex;
