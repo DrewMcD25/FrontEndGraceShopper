@@ -12,6 +12,7 @@ import './components/style/home.css'
 
 const App = () => {
     const [isNewUser, setIsNewUser] = useState(true)
+    const [allInv, setAllInv] = useState([])
     const renderAuthForm = (e) => {
         if (isNewUser) {
             return <Login toggleNewUser={setIsNewUser} />
@@ -31,7 +32,7 @@ const App = () => {
                     <Switch>
                         <div>
                             <Route exact path="/login"><Login /></Route>
-                            <Route exact path="/shop"><Shop/></Route>
+                            <Route exact path="/shop"><Shop allInv={allInv} setAllInv={setAllInv}/></Route>
                             <Route exact path="/cart"><Cart/></Route>
                             <Route exact path="/register"><Register /></Route>
                             <Route exact path="/"><Home /></Route>
