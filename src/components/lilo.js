@@ -14,7 +14,7 @@ const Login = ({ userToken }) => {
     const [password, setPassword] = useState('')
     async function saveToken(event) {
         event.preventDefault()
-        fetch('https://serene-stream-31668.herokuapp.com//users/login', {
+        fetch('https://serene-stream-31668.herokuapp.com/api/users/login', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -29,19 +29,20 @@ const Login = ({ userToken }) => {
             .then(result => {
                 localStorage.setItem("token", result.data.token)
                 console.log(result);
+                history.push('/');
             })
             .catch(console.error);
     }
 
-async function onSubmit(e) {
-    e.preventDefault();
-    history.push('/');
-}
+// async function onSubmit(e) {
+//     e.preventDefault();
+//     history.push('/');
+// }
 
     return (
         <div id="lilo">
             <h1>LOGIN</h1>
-            <form id="form" onSubmit={saveToken, onSubmit}>
+            <form id="form" onSubmit={saveToken}>
                 <input type="text" onChange={(event) => setUser(event.target.value)} value={user} required name="username" placeholder="username"></input>
                 <input type="password" onChange={(event) => setPassword(event.target.value)} value={password} required name="password" placeholder="password"></input>
                 <button>Log In</button>
