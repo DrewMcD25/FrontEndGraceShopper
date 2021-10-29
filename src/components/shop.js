@@ -18,7 +18,7 @@ const Shop = ({allInv, setAllInv}) => {
         <div id= "listOfShirts">
             <img src = "./style/{apparel.img}"/>
             <h1>{apparel.name}</h1>
-            <h3>{apparel.price}</h3>
+            <h2>{apparel.price}</h2>
             <select id = "ATC">
                 <option value="small">S</option>
                 <option value="medium">M</option>
