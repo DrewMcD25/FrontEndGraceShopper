@@ -53,6 +53,14 @@ color: white;
     color: white;
     -webkit-text-stroke: .7px black;
 }
+#listOfShop{
+    
+        text-align: center;
+        padding: 50px;
+        color: white;
+        -webkit-text-stroke: .7px black;
+    
+}
 #cart {
     text-align: center;
     padding: 50px;

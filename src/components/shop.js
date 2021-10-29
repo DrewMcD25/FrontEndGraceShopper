@@ -7,16 +7,18 @@ const Shop = ({allInv, setAllInv}) => {
             fetch('https://serene-stream-31668.herokuapp.com/api/allInv')
                 .then(response => response.json())
                 .then(result => {
-                    setAllInv(result.data.apparel)
                     console.log(result);
+                    setAllInv(result)
+                    
                 })
                 .catch(console.error);
         }, []);
         console.log(allInv);
         const shopElement= allInv.map((apparel) =>
         <div id= "listOfShirts">
-            <h1>Color{apparel.name}</h1>
-            <h3>Price{apparel.price}</h3>
+            <img src = "./style/{apparel.img}"/>
+            <h1>{apparel.name}</h1>
+            <h3>{apparel.price}</h3>
             <select id = "ATC">
                 <option value="small">S</option>
                 <option value="medium">M</option>
