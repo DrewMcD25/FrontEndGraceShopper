@@ -3,41 +3,45 @@ import ReactDOM from 'react-dom';
 import { useHistory, userHistory } from 'react-router-dom';
 
 const Login = ({ userToken }) => {
-    // function handleChange(event) {
-    //     const userKey = event.target.attributes['name'].value
-    //     const newState = { ...user }
-    //     newState[userKey] = event.target.value
-    //     setUser(newState)
-    //}
     let history = useHistory();
     const [user, setUser] = useState('')
     const [password, setPassword] = useState('')
     async function saveToken(event) {
+        if(user!= user){
+            alert('invalid username or password')
+        }
         event.preventDefault()
-        fetch('https://serene-stream-31668.herokuapp.com/api/users/login', {
+        let failed = 500
+        await fetch('https://serene-stream-31668.herokuapp.com/api/users/login', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                user: {
+                
                     username: event.target.username.value,
                     password: event.target.password.value
-                }
+                
             })
-        }).then(response => response.json())
+        }).then(response => { 
+            console.log(response)
+            failed = !response.ok
+            return response.json()
+        })
             .then(result => {
-                localStorage.setItem("token", result.data.token)
+                if (failed){
+                    alert (result.message)
+                }
+                localStorage.setItem("token", result.token)
                 console.log(result);
                 history.push('/');
             })
             .catch(console.error);
+               
+        
     }
 
-// async function onSubmit(e) {
-//     e.preventDefault();
-//     history.push('/');
-// }
+
 
     return (
         <div id="lilo">
@@ -47,7 +51,7 @@ const Login = ({ userToken }) => {
                 <input type="password" onChange={(event) => setPassword(event.target.value)} value={password} required name="password" placeholder="password"></input>
                 <button>Log In</button>
             </form>
-            <h2>Not a member? Create an account to shop! Otherwise, login with existing account!</h2>
+            <h2> Not a member? Create an account to shop! Otherwise, login with existing account!</h2>
 
         </div>
     )
@@ -56,7 +60,6 @@ const Login = ({ userToken }) => {
 }
 
 
-
-
-
 export default Login;
+
+
