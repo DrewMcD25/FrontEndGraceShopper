@@ -17,6 +17,13 @@ const Shop = ({allInv, setAllInv}) => {
         <div id= "listOfShirts">
             <h1>Color{apparel.name}</h1>
             <h3>Price{apparel.price}</h3>
+            <select id = "ATC">
+                <option value="small">S</option>
+                <option value="medium">M</option>
+                <option value="large">L</option>
+                <option value="Xlarge">XL</option>
+            </select>
+            <button>Add To Cart</button>
         </div>
         );
     return (
