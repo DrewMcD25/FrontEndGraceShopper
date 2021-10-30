@@ -1,8 +1,18 @@
 import React from "react"
-import {Link} from "react-router-dom"
+import {Link, useHistory} from "react-router-dom"
 import './style/home.css'
 
-const Navbar = () => {
+const Navbar = ({username}) => {
+//     const history = useHistory();
+
+//  function logout(e){
+//      e.prevent.default();
+//      localStorage.removeItem('token')
+//      setLogIn(null);
+//      history.push('/')
+
+// }
+
     return (
         <div>
             <Link to="/">Home</Link>
