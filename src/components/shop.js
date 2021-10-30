@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom'
 
 const Shop = ({ allInv, setAllInv }) => {
     useEffect(async function () {
-        fetch('https://serene-stream-31668.herokuapp.com/api/allInv')
+        fetch('http://localhost:5000/api/allInv')
+        // fetch('https://serene-stream-31668.herokuapp.com/api/allInv')
             .then(response => response.json())
             .then(result => {
                 console.log(result);
@@ -15,10 +16,18 @@ const Shop = ({ allInv, setAllInv }) => {
     }, []);
     console.log(allInv);
 
-async function handleSubmit(event){
-    event.preventDefault();
+async function handleSubmit(apparelId){
+   
     try {
-        const data = await API.makeRequest('./allInv', POST)
+        console.log()
+        const data = await fetch('https://serene-stream-31668.herokuapp.com/api/cart',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem('token')}`
+            },
+            body: JSON.stringify({apparelId})
+        })
         console.log(data)
         
     } catch (error) {
@@ -39,7 +48,7 @@ async function handleSubmit(event){
                 <option value="large">L</option>
                 <option value="xlarge">XL</option>
             </select>
-            <button onClick={handleSubmit}>Add To Cart</button>
+            <button onClick={()=>handleSubmit(apparel.id)}>Add To Cart</button>
         </div>
     );
     return (
