@@ -16,10 +16,13 @@ const Shop = ({ allInv, setAllInv }) => {
     console.log(allInv);
 
 async function handleSubmit(event){
+    event.preventDefault();
     try {
-        
+        const data = await API.makeRequest('./allInv', POST)
+        console.log(data)
         
     } catch (error) {
+        console.error(error)
         
     }
 
