@@ -36,6 +36,7 @@ const App = () => {
                             <Route exact path="/cart"><Cart/></Route>
                             <Route exact path="/register"><Register /></Route>
                             <Route exact path="/"><Home /></Route>
+                            
                         </div>
                     </Switch>
                 </main>
