@@ -16,7 +16,7 @@ const Shop = ({ allInv, setAllInv }) => {
     console.log(allInv);
     const shopElement = allInv.map((apparel) =>
         <div id="listOfShirts">
-            <img src="./style/{apparel.image}"/>
+            <img src="./components/style/{apparel.image}"/>
             <h1>{apparel.name}</h1>
             <h2>{apparel.price}</h2>
             <select id="ATC">
