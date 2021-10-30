@@ -14,6 +14,17 @@ const Shop = ({ allInv, setAllInv }) => {
             .catch(console.error);
     }, []);
     console.log(allInv);
+
+async function handleSubmit(event){
+    try {
+        
+        
+    } catch (error) {
+        
+    }
+
+}
+
     const shopElement = allInv.map((apparel) =>
         <div id="listOfShirts">
             <img src="./components/style/{apparel.image}"/>
@@ -25,7 +36,7 @@ const Shop = ({ allInv, setAllInv }) => {
                 <option value="large">L</option>
                 <option value="xlarge">XL</option>
             </select>
-            <button>Add To Cart</button>
+            <button onClick={handleSubmit}>Add To Cart</button>
         </div>
     );
     return (
