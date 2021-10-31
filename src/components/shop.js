@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import ReactDOM from 'react-dom'
 
 
+
 const Shop = ({ allInv, setAllInv }) => {
     useEffect(async function () {
-        fetch('http://localhost:5000/api/allInv')
-        // fetch('https://serene-stream-31668.herokuapp.com/api/allInv')
+        fetch('https://serene-stream-31668.herokuapp.com/api/allInv')
             .then(response => response.json())
             .then(result => {
                 console.log(result);
@@ -16,39 +16,40 @@ const Shop = ({ allInv, setAllInv }) => {
     }, []);
     console.log(allInv);
 
-async function handleSubmit(apparelId){
-   
-    try {
-        console.log()
-        const data = await fetch('https://serene-stream-31668.herokuapp.com/api/cart',{
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${localStorage.getItem('token')}`
-            },
-            body: JSON.stringify({apparelId})
-        })
-        console.log(data)
-        
-    } catch (error) {
-        console.error(error)
-        
-    }
+    async function handleSubmit(apparelId) {
 
-}
+        try {
+            console.log()
+            const data = await fetch('https://serene-stream-31668.herokuapp.com/api/cart', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    // 'Authorization': `Bearer ${localStorage.getItem('token')}`
+                },
+                body: JSON.stringify({ apparelId })
+            })
+            console.log(data)
+
+        } catch (error) {
+            console.error(error)
+
+        }
+
+    }
 
     const shopElement = allInv.map((apparel) =>
         <div id="listOfShirts">
-            <img src="./components/style/{apparel.image}"/>
+            <img src="./components/images/{apparel.image}"/>
             <h1>{apparel.name}</h1>
             <h2>{apparel.price}</h2>
-            <select id="ATC">
+            
+            <select id="Size">
                 <option value="small">S</option>
                 <option value="medium">M</option>
                 <option value="large">L</option>
                 <option value="xlarge">XL</option>
             </select>
-            <button onClick={()=>handleSubmit(apparel.id)}>Add To Cart</button>
+            <button onClick={() => handleSubmit(apparel.id)}>Add To Cart</button>
         </div>
     );
     return (
