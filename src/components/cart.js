@@ -16,7 +16,7 @@ const Cart =({ cart, setCart }) => {
 
         async function handleSubmit(event){
             event.preventDefault()
-            delete cartElement()
+            delete {cartElement}
             alert('THANKS FOR SHOPPING WITH US')
 
         }
