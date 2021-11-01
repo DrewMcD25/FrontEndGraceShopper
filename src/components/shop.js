@@ -36,7 +36,6 @@ const Shop = ({ allInv, setAllInv }) => {
         }
 
     }
-
     const shopElement = allInv.map((apparel) =>
         <div id="listOfShirts">
             <img src={(`${process.env.PUBLIC_URL}/images/${apparel.name}Front.png`)}

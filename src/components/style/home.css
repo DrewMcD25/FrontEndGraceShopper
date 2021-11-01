@@ -17,7 +17,7 @@
 }
 
 #navbar a:hover{
-    background-color: transparent ;
+    background-color: transparent;
     color: #b4242d;
 }
 
@@ -80,5 +80,11 @@ color: white;
     color: white;
     text-align: center;
     -webkit-text-stroke: .7px black;
+}
+
+#listOfShirts {
+    background-color: rgba(225, 225, 225, .8);
+    padding: 30px;
+
 }
 
