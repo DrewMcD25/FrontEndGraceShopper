@@ -42,7 +42,6 @@ const Shop = ({ allInv, setAllInv }) => {
             <img src="./components/images/{apparel.image}"/>
             <h1>{apparel.name}</h1>
             <h2>{apparel.price}</h2>
-            
             <select id="Size">
                 <option value="small">S</option>
                 <option value="medium">M</option>

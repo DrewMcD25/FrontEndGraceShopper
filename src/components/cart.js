@@ -14,15 +14,22 @@ const Cart =({ cart, setCart }) => {
         }, []);
         console.log(cart);
 
-        const cartElement = cart.map((cart)=>
+        async function handleSubmit(event){
+            event.preventDefault()
+            delete cartElement()
+            alert('THANKS FOR SHOPPING WITH US')
+
+        }
+
+        const cartElement = cart.map((apparel)=>
         <div id= "cartItems">
             <img src="./components/images/{apparel.image}"/>
             <h1>{apparel.name}</h1>
             <h2>{apparel.price}</h2>
             <h2>{apparel.size}</h2>
-
-
-            <button>Checkout</button>
+            <div>
+            <button onClick={()=> handleSubmit()}>Checkout</button> 
+            </div>
 
         </div>
         )
