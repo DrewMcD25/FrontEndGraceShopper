@@ -24,7 +24,7 @@ const Shop = ({ allInv, setAllInv }) => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    // 'Authorization': `Bearer ${localStorage.getItem('token')}`
+                     'Authorization': `Bearer ${localStorage.getItem('token')}`
                 },
                 body: JSON.stringify({ apparelId })
             })
@@ -39,7 +39,9 @@ const Shop = ({ allInv, setAllInv }) => {
 
     const shopElement = allInv.map((apparel) =>
         <div id="listOfShirts">
-            <img src="./components/images/{apparel.image}"/>
+            <img src={(`${process.env.PUBLIC_URL}/images/${apparel.name}Front.png`)}
+            height="300"
+            width="300"/>
             <h1>{apparel.name}</h1>
             <h2>{apparel.price}</h2>
             <select id="Size">

@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom'
 
 const Cart =({ cart, setCart }) => {
         useEffect(async function () {
-            fetch('https://serene-stream-31668.herokuapp.com/api/cart')
+            console.log(cart)
+            fetch('https://serene-stream-31668.herokuapp.com/api/cart/id')
                 .then(response => response.json())
                 .then(result => {
                     console.log(result);
@@ -12,7 +13,6 @@ const Cart =({ cart, setCart }) => {
                 })
                 .catch(console.error);
         }, []);
-        console.log(cart);
 
         async function handleSubmit(event){
             event.preventDefault()
