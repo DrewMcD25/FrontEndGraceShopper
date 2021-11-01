@@ -23,7 +23,9 @@ const Cart =({ cart, setCart }) => {
 
         const cartElement = cart.map((apparel)=>
         <div id= "cartItems">
-            <img src="./components/images/{apparel.image}"/>
+            <img src={(`${process.env.PUBLIC_URL}/images/${apparel.name}Front.png`)}
+            height="300"
+            width="300"/>
             <h1>{apparel.name}</h1>
             <h2>{apparel.price}</h2>
             <h2>{apparel.size}</h2>
