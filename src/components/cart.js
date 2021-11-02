@@ -38,13 +38,13 @@ const Shop = ({ allInv, setAllInv }) => {
     }
 
     const shopElement = allInv.map((apparel) =>
-        <div id="listOfCart">
-            <img src={(`${process.env.PUBLIC_URL}/images/${apparel.name}Front.png`)}
+        <ul id ="listofCart">
+            <li><img src={(`${process.env.PUBLIC_URL}/images/${apparel.name}Front.png`)}
             height="300"
             width="300"/>
             <h1>{apparel.name}</h1>
-            <h2>{apparel.price}</h2>
-        </div>
+            <h2>{apparel.price}</h2></li>
+        </ul>
     );
     return (
         <div id="cart">
