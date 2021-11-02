@@ -50,7 +50,8 @@ const Shop = ({ allInv, setAllInv }) => {
         <div id="cart">
             <h1 id="listOfShop"> Shopping Cart</h1>
             {shopElement}
-            <button id = "checkoutButton">Checkout</button><text id="totaCost">Total - $120</text>
+            <text id="totalCost">Total - $120</text>
+            <button id ="checkoutButton">Checkout</button>
         </div>
     )
 }
