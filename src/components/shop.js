@@ -37,10 +37,11 @@ const Shop = ({ allInv, setAllInv }) => {
 
     }
     const shopElement = allInv.map((apparel) =>
+        <div class="row">
         <div id="listOfShirts">
             <img src={(`${process.env.PUBLIC_URL}/images/${apparel.name}Front.png`)}
-            height="300"
-            width="300"/>
+            height="450"
+            width="450"/>
             <h1>{apparel.name}</h1>
             <h2>{apparel.price}</h2>
             <select id="Size">
@@ -50,11 +51,11 @@ const Shop = ({ allInv, setAllInv }) => {
                 <option value="xlarge">XL</option>
             </select>
             <button onClick={() => handleSubmit(apparel.id)}>Add To Cart</button>
-        </div>
+        </div></div>
     );
     return (
         <div id="shop">
-            <h1 id="listOfShop"> SHOP</h1>
+            <h1 id="listOfShop">SHOP</h1>
             {shopElement}
         </div>
     )
