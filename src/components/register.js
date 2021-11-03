@@ -60,13 +60,13 @@ const Register = () => {
 
     return (
         <div id="register">
-            <h1>REGISTER</h1>
+            <h1 class="titles">REGISTER</h1>
             <form onSubmit={handleSubmit}>
             <input type="text" onChange={(event) => setUsername(event.target.value)} value={username} required name="username" placeholder="username"></input>
                 <input type="password" onChange={(event) => setPassword(event.target.value)} value={password} required name="password" placeholder="password"></input>
                 <button>Register</button>
             </form>
-            <h2>Already a member? Head over to the Login page and get signed in!</h2>
+            <h2>Already a member? Head over to the <a href="./lilo.js">Login page</a> and get signed in!</h2>
         </div>
     )
 }

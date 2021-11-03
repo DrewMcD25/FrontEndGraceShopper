@@ -55,7 +55,7 @@ const Shop = ({ allInv, setAllInv }) => {
     );
     return (
         <div id="shop">
-            <h1 id="listOfShop">SHOP</h1>
+            <h1 class="titles">SHOP</h1>
             {shopElement}
         </div>
     )

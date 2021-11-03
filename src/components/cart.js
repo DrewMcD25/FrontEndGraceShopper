@@ -48,7 +48,7 @@ const Shop = ({ allInv, setAllInv }) => {
     );
     return (
         <div id="cart">
-            <h1 id="listOfShop">Shopping Cart</h1>
+            <h1 class="titles">Shopping Cart</h1>
             {shopElement}
             <text id="totalCost">Total - $120</text>
             <div><button id="checkoutButton">Checkout</button></div>
