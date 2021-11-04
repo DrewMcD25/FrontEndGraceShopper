@@ -68,18 +68,15 @@ color: white;
     /* -webkit-text-stroke: .7px black; */
 }
 
-#listOfShop {
-    font-family: 'Belleza', serif;
-    text-align: center;
-    padding: 50px;
-    color: white;
-    /* -webkit-text-stroke: .7px black; */
-}
-
 #cart {
     text-align: center;
     padding: 50px;
     color: white;
+    float: left;
+    background-color: #b4242d;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    border-radius: black 3px;
     /* -webkit-text-stroke: .7px black; */
 }
 
@@ -104,6 +101,18 @@ color: white;
     /* width: 50%; */
 }
 
+#listOfShop {
+    font-family: 'Belleza', serif;
+    text-align: center;
+    padding: 50px;
+    color: white;
+    float: left;
+}
+
+#listofCart {
+    margin: 30px;
+}
+
 #checkoutButton {
     font-family: 'Belleza', serif;
     margin-top: 15px;
@@ -114,7 +123,7 @@ color: white;
     border-radius: 10px;
     border-color: white;
     border-width: 3px;
-    background-color: red;
+    background-color: rgb(221, 115, 33);
     color: black;
 }
 

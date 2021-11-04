@@ -44,6 +44,8 @@ const Shop = ({ allInv, setAllInv }) => {
             width="300"/>
             <h1>{apparel.name}</h1>
             <h2>{apparel.price}</h2></li>
+            <div id="updateButton">-  <button>1</button>  +</div>
+            <div id="deleteButton"><button>Delete</button></div>
         </ul>
     );
     return (
